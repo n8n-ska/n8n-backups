@@ -1,0 +1,1319 @@
+{
+  "active": true,
+  "connections": {
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields2": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets Trigger": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields3": {
+      "main": [
+        [
+          {
+            "node": "Filter1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets Trigger1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter1": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Date & Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields4": {
+      "main": [
+        [
+          {
+            "node": "Filter2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If2": {
+      "main": [
+        [
+          {
+            "node": "Date & Time1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets Trigger2": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter2": {
+      "main": [
+        [
+          {
+            "node": "If2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields5": {
+      "main": [
+        []
+      ]
+    },
+    "Date & Time1": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-22T11:40:43.299Z",
+  "id": "K31rnJVnxqbtYaG9",
+  "isArchived": false,
+  "meta": null,
+  "name": "MadRent",
+  "nodes": [
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "bdb3db33-1c66-444e-9979-85f8c7ff66fb",
+              "name": "Timestamp",
+              "value": "={{ $json.Timestamp +0.0833333333}}",
+              "type": "number"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        432,
+        192
+      ],
+      "id": "68d7ee5b-d702-43f3-b931-5986d76fe86c",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4392138d-7038-40c7-bbc5-488845e08500",
+              "name": "Name",
+              "value": "={{ $json.Name }}",
+              "type": "string"
+            },
+            {
+              "id": "222eeaf4-cf43-492d-86cd-d892230346c2",
+              "name": "Email",
+              "value": "={{ $json.Email }}",
+              "type": "string"
+            },
+            {
+              "id": "6aecdba8-f3b6-47c0-8ab1-64765cab5443",
+              "name": "Phone",
+              "value": "={{ $json.Phone }}",
+              "type": "string"
+            },
+            {
+              "id": "6866a708-9332-4ba3-81ff-2e2092f356b5",
+              "name": "GCLID",
+              "value": "={{ $json['GCLID (deal)'] }}",
+              "type": "string"
+            },
+            {
+              "id": "2a3a1799-7957-4c62-af0d-f2ad75a95d85",
+              "name": "Timestamp",
+              "value": "={{ $json['Created Date'] }}",
+              "type": "number"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -464,
+        96
+      ],
+      "id": "5f58787f-e45c-4613-b905-fe63214e01a9",
+      "name": "Edit Fields2"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1_mGIrksIvLagQQCvDdxDFHQDVYZfqaUDOXJyOwJ-Rdc/edit?gid=0#gid=0",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "1PD",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_mGIrksIvLagQQCvDdxDFHQDVYZfqaUDOXJyOwJ-Rdc/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "={{ $json.Name }}",
+            "Email": "={{ $json.Email }}",
+            "Number": "={{ $json.Phone }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Surname",
+              "displayName": "Surname",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Number",
+              "displayName": "Number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -240,
+        0
+      ],
+      "id": "4d91d74d-9bec-40d4-851f-58edfd1363a0",
+      "name": "Append row in sheet2",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "EVhkl29wkchBqgpW",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "ef4cbc15-5e9f-4705-a351-164cb1a6b636",
+              "leftValue": "={{ $('Edit Fields2').item.json.GCLID }}",
+              "rightValue": "''",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        208,
+        192
+      ],
+      "id": "e56f9de4-83f5-40a8-adc3-5c169a5b8141",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1EiXtcSCf79amGvbH90Sg5MfnLHeiEU8sAyBwzHKtXKE/edit?gid=1008980182#gid=1008980182",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1008980182,
+          "mode": "list",
+          "cachedResultName": "conversion-import-template",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1dmjtdBrDNCVMJYi3AmQpgE0XN82jbVJFnezxJtKhDrk/edit#gid=1008980182"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Google Click ID": "={{ $('Edit Fields2').item.json.GCLID }}",
+            "Conversion Time": "=={{ $json.Timestamp }}+0.0833333333",
+            "Conversion Value": "1",
+            "Conversion Currency": "ZAR",
+            "Conversion Name": "Lead In"
+          },
+          "matchingColumns": [
+            "### INSTRUCTIONS ####"
+          ],
+          "schema": [
+            {
+              "id": "Google Click ID",
+              "displayName": "Google Click ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Conversion Name",
+              "displayName": "Conversion Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Conversion Time",
+              "displayName": "Conversion Time",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Conversion Value",
+              "displayName": "Conversion Value",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Conversion Currency",
+              "displayName": "Conversion Currency",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Ad User Data",
+              "displayName": "Ad User Data",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Ad Personalization",
+              "displayName": "Ad Personalization",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {
+          "locationDefine": {
+            "values": {
+              "headerRow": 7
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        656,
+        192
+      ],
+      "id": "070d1f7f-5976-4170-b5fc-8b9d9dfbd938",
+      "name": "Append row in sheet3",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "EVhkl29wkchBqgpW",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "hour": 0
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1Xn6pSje6duf2P38nI-69vWyygV8E7C9kJ_0SMTuX1NM/edit?gid=1337648063#gid=1337648063",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "All WEB Lead Intake",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Xn6pSje6duf2P38nI-69vWyygV8E7C9kJ_0SMTuX1NM/edit#gid=0"
+        },
+        "event": "rowUpdate",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        -688,
+        96
+      ],
+      "id": "3ddcd2a0-17b9-40d9-872b-0f2292e56333",
+      "name": "Google Sheets Trigger",
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "16zRXmO0CKWQ6jvR",
+          "name": "Alliance Media Sheets"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// Get the raw timestamp value, which might be a string.\nconst rawTimestamp = item.json.Timestamp;\n\n// Convert the raw value to a floating-point number.\nconst excelTimestamp = parseFloat(rawTimestamp);\n\n// Check if the conversion was successful. isNaN() checks for \"Not a Number\".\nif (isNaN(excelTimestamp)) {\n  item.json.error = `Timestamp could not be converted to a number. Input was: '${rawTimestamp}'`;\n  return item;\n}\n\n// Convert the Excel serial date to a JavaScript Date object.\n// The formula (excelTimestamp - 25569) * 86400 * 1000 converts the\n// number of days from Excel's 1900 epoch to milliseconds from Unix's 1970 epoch.\nconst date = new Date((excelTimestamp - 25569) * 86400 * 1000);\n\n// Helper function to add a leading zero.\nconst pad = (num) => num.toString().padStart(2, '0');\n\n// Extract each part of the date in UTC to avoid timezone issues.\nconst year = date.getUTCFullYear();\nconst month = pad(date.getUTCMonth() + 1); // getMonth() is 0-indexed.\nconst day = pad(date.getUTCDate());\nconst hours = pad(date.getUTCHours());\nconst minutes = pad(date.getUTCMinutes());\nconst seconds = pad(date.getUTCSeconds());\n\n// Assemble the final string.\nconst formattedDate = `${year}-${month}-${day}-${hours}-${minutes}-${seconds}`;\n\n// Add the new 'formattedDate' field to the current item.\nitem.json.formattedDate = formattedDate;\n\n// Return the modified item.\nreturn item;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -16,
+        192
+      ],
+      "id": "377301ac-d7a5-4d1a-9a23-d40bae691cd9",
+      "name": "Code1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "de63b2ab-7f7b-43db-9de3-e0872a15cee1",
+              "leftValue": "={{ $json.GCLID }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        -240,
+        192
+      ],
+      "id": "54c86938-6cd0-4e52-bf6c-4f6ec858fbbf",
+      "name": "Filter"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4392138d-7038-40c7-bbc5-488845e08500",
+              "name": "Name",
+              "value": "={{ $json.Name }}",
+              "type": "string"
+            },
+            {
+              "id": "222eeaf4-cf43-492d-86cd-d892230346c2",
+              "name": "Email",
+              "value": "={{ $json.Email }}",
+              "type": "string"
+            },
+            {
+              "id": "6aecdba8-f3b6-47c0-8ab1-64765cab5443",
+              "name": "Phone",
+              "value": "={{ $json.Phone }}",
+              "type": "string"
+            },
+            {
+              "id": "6866a708-9332-4ba3-81ff-2e2092f356b5",
+              "name": "GCLID",
+              "value": "={{ $json['GCLID (deal)'] }}",
+              "type": "string"
+            },
+            {
+              "id": "2a3a1799-7957-4c62-af0d-f2ad75a95d85",
+              "name": "Timestamp",
+              "value": "={{ $json['Add time'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -496,
+        784
+      ],
+      "id": "e36697da-9d7e-45c6-8b0d-5ac3df35d061",
+      "name": "Edit Fields3"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "ef4cbc15-5e9f-4705-a351-164cb1a6b636",
+              "leftValue": "={{ $('Edit Fields3').item.json.GCLID }}",
+              "rightValue": "''",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -48,
+        784
+      ],
+      "id": "8e83df11-bb0e-4624-8879-191d92967a68",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1EiXtcSCf79amGvbH90Sg5MfnLHeiEU8sAyBwzHKtXKE/edit?gid=1008980182#gid=1008980182",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1008980182,
+          "mode": "list",
+          "cachedResultName": "conversion-import-template",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1dmjtdBrDNCVMJYi3AmQpgE0XN82jbVJFnezxJtKhDrk/edit#gid=1008980182"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Google Click ID": "={{ $('Edit Fields3').item.json.GCLID }}",
+            "Conversion Time": "={{ $json.formattedDate }}",
+            "Conversion Value": "1",
+            "Conversion Currency": "ZAR",
+            "Conversion Name": "Lead to Deal"
+          },
+          "matchingColumns": [
+            "### INSTRUCTIONS ####"
+          ],
+          "schema": [
+            {
+              "id": "Google Click ID",
+              "displayName": "Google Click ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Conversion Name",
+              "displayName": "Conversion Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Conversion Time",
+              "displayName": "Conversion Time",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Conversion Value",
+              "displayName": "Conversion Value",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Conversion Currency",
+              "displayName": "Conversion Currency",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Ad User Data",
+              "displayName": "Ad User Data",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Ad Personalization",
+              "displayName": "Ad Personalization",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {
+          "locationDefine": {
+            "values": {
+              "headerRow": 7
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        624,
+        784
+      ],
+      "id": "9e09ee7f-71f7-4616-8048-4751c01c24f9",
+      "name": "Append row in sheet4",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "EVhkl29wkchBqgpW",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "hour": 0
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1Xn6pSje6duf2P38nI-69vWyygV8E7C9kJ_0SMTuX1NM/edit?gid=1337648063#gid=1337648063",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1476382563,
+          "mode": "list",
+          "cachedResultName": "Lead to Deal",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Xn6pSje6duf2P38nI-69vWyygV8E7C9kJ_0SMTuX1NM/edit#gid=1476382563"
+        },
+        "event": "rowUpdate",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        -720,
+        784
+      ],
+      "id": "05964c3b-e882-481d-b8c1-4d6353b3a01b",
+      "name": "Google Sheets Trigger1",
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "16zRXmO0CKWQ6jvR",
+          "name": "Alliance Media Sheets"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "de63b2ab-7f7b-43db-9de3-e0872a15cee1",
+              "leftValue": "={{ $json.GCLID }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        -272,
+        784
+      ],
+      "id": "117f91bb-5e6d-496b-9ebc-f2aace8ae453",
+      "name": "Filter1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "85c3c4d3-b1be-4a7e-b7cb-0848e4ff2f99",
+              "name": "formattedDate",
+              "value": "={{ new Date((parseFloat($json.Timestamp) - 25569) * 86400000) }}",
+              "type": "number"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        176,
+        784
+      ],
+      "id": "87dec621-b2b5-45b5-be3f-2e154fe23028",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "operation": "formatDate",
+        "date": "={{ $('Google Sheets Trigger1').item.json['Add time'] }}",
+        "format": "custom",
+        "customFormat": "dd/MM/yyyy hh:mm:ss",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        400,
+        784
+      ],
+      "id": "263c5929-b823-4d67-b78c-880bfd83f0e2",
+      "name": "Date & Time"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4392138d-7038-40c7-bbc5-488845e08500",
+              "name": "Name",
+              "value": "={{ $json.Name }}",
+              "type": "string"
+            },
+            {
+              "id": "222eeaf4-cf43-492d-86cd-d892230346c2",
+              "name": "Email",
+              "value": "={{ $json.Email }}",
+              "type": "string"
+            },
+            {
+              "id": "6aecdba8-f3b6-47c0-8ab1-64765cab5443",
+              "name": "Phone",
+              "value": "={{ $json.Phone }}",
+              "type": "string"
+            },
+            {
+              "id": "6866a708-9332-4ba3-81ff-2e2092f356b5",
+              "name": "GCLID",
+              "value": "={{ $json['GCLID (deal)'] }}",
+              "type": "string"
+            },
+            {
+              "id": "2a3a1799-7957-4c62-af0d-f2ad75a95d85",
+              "name": "Timestamp",
+              "value": "={{ $json['Won date'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -464,
+        1280
+      ],
+      "id": "7f92f3ee-24bf-4660-b34b-4a605cb1eae2",
+      "name": "Edit Fields4"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "ef4cbc15-5e9f-4705-a351-164cb1a6b636",
+              "leftValue": "={{ $('Edit Fields4').item.json.GCLID }}",
+              "rightValue": "''",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -16,
+        1280
+      ],
+      "id": "6057c09b-cf66-4706-a71f-11fb13b5ceab",
+      "name": "If2"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1EiXtcSCf79amGvbH90Sg5MfnLHeiEU8sAyBwzHKtXKE/edit?gid=1008980182#gid=1008980182",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1008980182,
+          "mode": "list",
+          "cachedResultName": "conversion-import-template",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1dmjtdBrDNCVMJYi3AmQpgE0XN82jbVJFnezxJtKhDrk/edit#gid=1008980182"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Google Click ID": "={{ $('Edit Fields4').item.json.GCLID }}",
+            "Conversion Time": "={{ $json.formattedDate }}",
+            "Conversion Value": "1",
+            "Conversion Currency": "ZAR",
+            "Conversion Name": "Deal Won"
+          },
+          "matchingColumns": [
+            "### INSTRUCTIONS ####"
+          ],
+          "schema": [
+            {
+              "id": "Google Click ID",
+              "displayName": "Google Click ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Conversion Name",
+              "displayName": "Conversion Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Conversion Time",
+              "displayName": "Conversion Time",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Conversion Value",
+              "displayName": "Conversion Value",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Conversion Currency",
+              "displayName": "Conversion Currency",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Ad User Data",
+              "displayName": "Ad User Data",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Ad Personalization",
+              "displayName": "Ad Personalization",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {
+          "locationDefine": {
+            "values": {
+              "headerRow": 7
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        432,
+        1280
+      ],
+      "id": "7023b776-f36d-4b86-ab21-09616ac2bb6d",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "EVhkl29wkchBqgpW",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "hour": 0
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1Xn6pSje6duf2P38nI-69vWyygV8E7C9kJ_0SMTuX1NM/edit?gid=1337648063#gid=1337648063",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1337648063,
+          "mode": "list",
+          "cachedResultName": "Deal to WON",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Xn6pSje6duf2P38nI-69vWyygV8E7C9kJ_0SMTuX1NM/edit#gid=1337648063"
+        },
+        "event": "rowUpdate",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        -688,
+        1280
+      ],
+      "id": "f58b6af3-2476-45ab-86da-54f67dde0109",
+      "name": "Google Sheets Trigger2",
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "16zRXmO0CKWQ6jvR",
+          "name": "Alliance Media Sheets"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "de63b2ab-7f7b-43db-9de3-e0872a15cee1",
+              "leftValue": "={{ $json.GCLID }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        -240,
+        1280
+      ],
+      "id": "be85120c-1c07-4c46-96b2-b9180fd22e2d",
+      "name": "Filter2"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "85c3c4d3-b1be-4a7e-b7cb-0848e4ff2f99",
+              "name": "formattedDate",
+              "value": "={{ new Date((parseFloat($json.Timestamp) - 25569) * 86400000) }}",
+              "type": "number"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -688,
+        1504
+      ],
+      "id": "202e7c4d-93b9-4e44-9347-3635139c5832",
+      "name": "Edit Fields5",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "formatDate",
+        "date": "={{ $json.Timestamp }}",
+        "format": "custom",
+        "customFormat": "dd/MM/yyyy hh:mm:ss",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        208,
+        1280
+      ],
+      "id": "f59d25e9-358f-4b70-8579-317996637283",
+      "name": "Date & Time1"
+    },
+    {
+      "parameters": {
+        "content": "Leads In\n",
+        "height": 560,
+        "width": 1552
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -736,
+        -128
+      ],
+      "id": "440da646-bc48-407f-854a-3d9e829687a3",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "Lead to Deal",
+        "height": 560,
+        "width": 1552
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -784,
+        576
+      ],
+      "id": "978f8c45-a423-4f0c-bc8d-4ad9147d244e",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "Deal Won\n",
+        "height": 560,
+        "width": 1552
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -768,
+        1184
+      ],
+      "id": "44c63ad4-0b7b-4434-8d17-d7131795fb9f",
+      "name": "Sticky Note2"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": {
+    "node:Google Sheets Trigger": {
+      "documentId": "1Xn6pSje6duf2P38nI-69vWyygV8E7C9kJ_0SMTuX1NM",
+      "sheetId": 0,
+      "lastRevision": 215,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1Xn6pSje6duf2P38nI-69vWyygV8E7C9kJ_0SMTuX1NM&revision=215&exportFormat=xlsx"
+    },
+    "node:Google Sheets Trigger1": {
+      "documentId": "1Xn6pSje6duf2P38nI-69vWyygV8E7C9kJ_0SMTuX1NM",
+      "sheetId": 1476382563,
+      "lastRevision": 215,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1Xn6pSje6duf2P38nI-69vWyygV8E7C9kJ_0SMTuX1NM&revision=215&exportFormat=xlsx"
+    },
+    "node:Google Sheets Trigger2": {
+      "documentId": "1Xn6pSje6duf2P38nI-69vWyygV8E7C9kJ_0SMTuX1NM",
+      "sheetId": 1337648063,
+      "lastRevision": 215,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1Xn6pSje6duf2P38nI-69vWyygV8E7C9kJ_0SMTuX1NM&revision=215&exportFormat=xlsx"
+    }
+  },
+  "tags": [],
+  "triggerCount": 3,
+  "updatedAt": "2025-08-22T13:49:41.000Z",
+  "versionId": "9576a3fc-26c2-4427-8d41-f82cd8478a66"
+}
