@@ -1,0 +1,35 @@
+{
+  "active": true,
+  "connections": {},
+  "createdAt": "2025-08-26T13:05:13.582Z",
+  "id": "jBKudONbUNTrodu7",
+  "isArchived": false,
+  "meta": null,
+  "name": "My workflow 2",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "70878401-e39a-4337-9a85-1f61dafe59a5",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "da7eb6b4-89f7-4be0-9c7e-59a401466a9b",
+      "name": "Webhook",
+      "webhookId": "70878401-e39a-4337-9a85-1f61dafe59a5"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-08-26T13:05:16.000Z",
+  "versionId": "e669f931-8da3-48b9-8f91-74867f485f0c"
+}
